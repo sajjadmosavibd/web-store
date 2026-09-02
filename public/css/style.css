@@ -1,0 +1,46 @@
+:root{
+    --main-background-color:#0E2423;
+    --random-width:35px;
+    --line-color:red;
+    --circle-width:10px;
+    --circle-height:10px
+}
+
+#background{
+    background-color: var(--main-background-color);
+    width: 100vw;
+    height:100vh;
+    position: fixed;
+    inset:0;
+    z-index:0;
+}
+#main-body{
+    
+    position: relative;
+}
+
+.line{
+    width: var(--random-width);
+    height: 3px;
+    background-color: var(--line-color);
+    position: relative;
+    
+}
+
+.line::after,.line::before{
+    content:'';
+    position:absolute;
+    height: var(--circle-height);
+    width: var(--circle-width);
+    top:50%;
+    transform: translateY(-50%);
+    background-color: var(--line-color);
+    border-radius: 50%;
+}
+
+.line::after{left: 0;
+
+}
+.line::before{right: 0;
+
+}
