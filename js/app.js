@@ -49,4 +49,4 @@ const headerAnimation=()=>{
     },2000)
 }
 
-setInterval(headerAnimation,Math.random()*4000)
+setInterval(headerAnimation,3000)

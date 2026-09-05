@@ -1,5 +1,5 @@
 :root{
-    --main-background-color:#0E2423;
+    --main-background-color:#f8f9fc;
     --random-translateX:35px;
     --line-color:red;
     --circle-width:10px;
@@ -87,30 +87,117 @@ transform: translate(50%,-50%);
     display: grid;
     grid-template-columns: repeat(9,1fr);
     grid-template-rows: 80px 45px auto 230px;
-    gap:10px;
+   
 }
 #header{
 grid-column: 1/-1;
 border-bottom:1px solid black;
 display: flex;
 gap:50px;
-padding:0px 10px;
-background:linear-gradient(to right,#0F172A  ,#1E3A8A);
+padding:5px 10px;
+background:linear-gradient(to right,#667eea   ,#764ba2 100%);
+justify-content: center;
+
 }
 #site-name{
     flex: 1 ;
+    max-width: 250px;
 height: 100%;
+padding: 0px 16px;
+position: relative;
+}
+
+#site-name::after{
+    content:"";
+    width: 1px;
+    height: 70%;
+    background-color: white;
+    right:0px;
+    position:absolute;
+    top:9px
+}
+#site-name p{
+    font-size:50px;
+    margin: 0px;
+    color: rgb(160, 226, 229);
 
 }
 #search{
 height: 100%;
-
+max-width: 500px;
 flex: 1;
+line-height: 60px;
+position: relative;
 }
+
+#search input{
+width: 100%;
+height:30px;
+border-radius: 8px;
+border:none;
+outline: none;
+box-shadow: 0px 4px 0px #7255B5;
+padding:2px 5px
+}
+
+#search-icon{
+    display: block;
+    width:30px;
+    height: 30px;
+    
+    position:absolute;
+  
+    top:15px;
+    right:0px;
+    background:url('../img/search.png');
+}
+
 #login-basket{
     flex: 1 ;
-    
+    max-width: 150px;
 height: 100%;
+display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: end;
+     gap:8px;
+     padding:0px 16px;
+     
+     position: relative;
+}
+#login-basket::after{
+    content:"";
+    width: 1px;
+    height: 70%;
+    background-color: white;
+    left:0px;
+    position:absolute;
+    top:9px
+}
+#login{
+     color:white;
+     font-size:16px;
+     text-decoration:none;
+     
+}
+#login:hover{
+    color:red;
+}
+#basket{
+    width:34px;
+    height:35px;
+    display:block;
+   position: relative;
+    border-radius: 50%;
+    background:  url('../img/basket\ default.png') -2px -5px;
+    
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgb(66, 65, 65);
+    cursor: pointer;
+}
+
+#basket:hover{
+    background:  url('../img/basket\ hover.png') -2px -5px;
 }
 
 
@@ -119,7 +206,19 @@ height: 100%;
 
 #nav{
 grid-column: 1/-1;
+height: 30px;
+background: linear-gradient(to right, #667eea, #764ba2 100%);
+border-bottom:1px solid black;
+box-shadow: 0px 1px 5px rgb(66, 65, 65);
 }
+
+
+
+
+
+
+
+
 #body{
 grid-column: 2/7;
 }
